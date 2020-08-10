@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/current"
+        android:icon="@drawable/ic_my_location"
+        android:title="@string/current" />
+    <item
+        android:id="@+id/date"
+        android:icon="@drawable/ic_date"
+        android:title="@string/date" />
+    <item
+        android:id="@+id/forecast"
+        android:icon="@drawable/ic_cloud"
+        android:title="@string/_7_days" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
+</menu>

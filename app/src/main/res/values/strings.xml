@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="temperature_units">Temperature Units</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="ok">OK</string>
+    <string name="title_location_permission">Location Permission</string>
+    <string name="text_location_permission">Please grant location permission so we can show you the Local Weather</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="example_johnny_bravo">Example: Johnny Bravo</string>
+    <string name="submit">Submit</string>
+    <string name="name_cant_be_empty">Name Can\'t be empty</string>
+    <string name="current">Current</string>
+    <string name="date">Date</string>
+    <string name="_7_days">7 Days</string>
+    <string name="settings">Settings</string>
+    <string name="user_name">User Name</string>
+    <string name="weather_details">Weather Details</string>
+    <string name="temperature_felt">Temperature Felt</string>
+    <string name="visibility">Visibility</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="current_temp_value_celsius">%d℃</string>
+    <string name="current_temp_value_fahrenheit">%d℉</string>
+    <string name="temp_min_max_value_celsius">%d℃/%d℃</string>
+    <string name="temp_min_max_value_fahrenheit">%d℉/%d℉</string>
+    <string name="visibility_value">%d Km</string>
+    <string name="wind_speed_value_meteres_per_second">%d metres/s</string>
+    <string name="wind_speed_value_miles_per_hour">%d miles/h</string>
+    <string name="humidity_value">%d %%</string>
+    <string name="hi_user_name">Hi %s!</string>
+    <string name="some_error_occoured">Some Error Occoured!</string>
+    <string name="enable_location_services">Please Enable Your Location Services!!</string>
+</resources>

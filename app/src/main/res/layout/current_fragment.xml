@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".fragments.CurrentWeatherFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/example_johnny_bravo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivWeatherType"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/tvTemperature"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@id/tvWeatherType"
+                app:srcCompat="@drawable/ic_cloud_mipmap" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="@id/tvUserName"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+                tools:text="@string/current_temp_value_celsius" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWeatherType"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvTemperature"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Cloudy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWeatherDetails"
+                style="@style/Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/weather_details"
+                app:layout_constraintStart_toStartOf="@id/tvTemperature"
+                app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTemperatureFelt"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@id/tvTemperature"
+                app:layout_constraintTop_toBottomOf="@id/tvWeatherDetails"
+                tools:text="35\u2103" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTemperatureFeltHeading"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/temperature_felt"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintStart_toStartOf="@id/tvTemperature"
+                app:layout_constraintTop_toBottomOf="@id/tvTemperatureFelt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVisibility"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="64dp"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvTemperatureFelt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/barrier"
+                tools:text="9 Km" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVisibilityHeading"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/visibility"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintStart_toStartOf="@id/barrier"
+                app:layout_constraintTop_toBottomOf="@id/tvVisibility" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHumidity"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@id/tvTemperature"
+                app:layout_constraintTop_toBottomOf="@id/tvTemperatureFeltHeading"
+                tools:text="@string/humidity_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHumidityHeading"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/humidity"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintStart_toStartOf="@id/tvTemperature"
+                app:layout_constraintTop_toBottomOf="@id/tvHumidity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWindSpeed"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvHumidity"
+                app:layout_constraintStart_toStartOf="@id/barrier"
+                tools:text="4 Km/h" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWindSpeedHeading"
+                style="@style/BodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/wind_speed"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintStart_toStartOf="@id/barrier"
+                app:layout_constraintTop_toBottomOf="@id/tvWindSpeed" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="left"
+                app:constraint_referenced_ids="tvVisibility,tvVisibilityHeading,
+            tvWindSpeed,tvWindSpeedHeading" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvUserName,tvTemperature,ivWeatherType,tvWeatherType,
+                tvWeatherDetails,tvTemperatureFelt,tvTemperatureFeltHeading,tvWindSpeed,
+                tvWindSpeedHeading,tvVisibilityHeading,tvVisibility,tvHumidity,tvHumidityHeading," />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHourly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvHumidityHeading"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
